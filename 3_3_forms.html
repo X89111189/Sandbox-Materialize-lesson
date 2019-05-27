@@ -130,20 +130,20 @@
     <!-- START HERE -->
     <form>
       <!-- TEXT FIELD -->
-      <div>
+      <div class="input-field">
         <input placeholder="Name" id="name" type="text">
         <label for="name">Name</label>
       </div>
 
       <!-- VALUE & DISABLED -->
-      <div>
-        <input placeholder="Email" id="email" type="email">
+      <div class="input-field ">
+        <input disabled placeholder="Email" id="email" type="email">
         <label for="email">Email</label>
       </div>
 
       <!-- TEXTAREA -->
-      <div>
-        <textarea placeholder="Message" id="message"></textarea>
+      <div class="input-field">
+        <textarea placeholder="Message" id="message" class="materialize-textarea"></textarea>
         <label for="message">Message</label>
       </div>
 
@@ -155,48 +155,84 @@
       </div>
 
       <!-- ICON PREFIX -->
-      <div>
+      <div class="input-field">
+        <i class="material-icons prefix red-text">phone</i>
         <input id="phone" type="tel">
         <label for="phone">Phone Number</label>
       </div>
 
       <!-- VALIDATION & ERROR -->
       <div>
-        <input placeholder="Email" id="email" type="email">
-        <label for="email">Email</label>
+        <input placeholder="Email" id="email" type="email" class="validate">
+        <label data-error="Invalid" data-success="Valid" for="email">Email</label>
       </div>
 
       <!-- SELECT (Must be initialized) -->
-      <div>
+      <div class="input-field">
         <select>
-
+          <!-- option{Opion $}*3 -->
+          <option value="1">Opion 1</option>
+          <option value="2">Opion 2</option>
+          <option value="3">Opion 3</option>
         </select>
         <label>Select List</label>
       </div>
 
       <!-- OPTION GROUPS -->
-      <div>
+      <div class>
         <select>
-
+          <optgroup>
+            <option value="1">Option 1</option>
+            <option value="2">Option 2</option>
+          </optgroup>
+          <optgroup>
+              <option value="1">Option 1</option>
+              <option value="2">Option 2</option>
+            </optgroup>
+            <optgroup>
+                <option value="2">Option 1</option>
+                <option value="">Option 2</option>
+            </optgroup>
         </select>
         <label>Multiple Select</label>
       </div>
 
       <!-- MULTIPLE SELECT -->
-      <div>
-        <select>
-
+      <div class="input-field">
+        <select multiple>
+          <option value=""></option>
+          <option value=""></option>
+          <option value="1">Option 1</option>
+          <option value="2">Option 2</option>
+          <option value="3">Option 3</option>
         </select>
         <label>Multiple Select</label>
       </div>
 
       <!-- RADIO BUTTONS -->
-
+      <p>
+          <input type="radio" name="gender", id="male">
+          <label for="male">Male</label>
+      </p>
+      <p>
+          <input type="radio" name="gender", id="female">
+          <label for="female">Female</label>
+      </p>
       <br>
       <br>
 
       <!-- CHECKBOXES -->
-
+      <p>
+          <input type="checkbox" name="gender", id="css">
+          <label for="css">class</label>
+      </p>
+      <p>
+          <input type="checkbox" name="gender", id="html">
+          <label for="html">HTML</label>
+      </p>      <p>
+          <input disabled type="checkbox" name="gender", id="node.js">
+          <label for="node.js">Node.js</label>
+      </p>
 
       <br>
       <br>
@@ -229,8 +265,8 @@
       });
 
       // JAVASCRIPT START HERE //
-
-
+        // document.querySelector('select').addEventListener('DOMContentLoaded', () => material_select());
+       $('select').material_select();
 
 
     });
